@@ -1,0 +1,193 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Niroop Cv portfolio - personal website template | Contact :
+            Niroop Cv</title>
+
+        <!-- google fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap"
+            rel="stylesheet">
+
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/style-starter.css">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <!-- inner page header -->
+        <div class="inner-banner">
+            <div class="w3l-header inner-w3l-header" id="home">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-dark pl-0 pr-0">
+                        <a class="navbar-brand m-0 text-primary"
+                            href="index.html"><span class="fa fa-gamepad"></span>
+                            Niroop
+                        </a>
+                        <button class="navbar-toggler" type="button"
+                            data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item mr-lg-4">
+                                    <a
+                                        class="nav-link pl-0 pr-0 font-weight-bold"
+                                        href="index.html">Home <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item mr-lg-4">
+                                    <a
+                                        class="nav-link pl-0 pr-0 font-weight-bold"
+                                        href="about.html">About</a>
+                                </li>
+                                <li class="nav-item mr-lg-4">
+                                    <a
+                                        class="nav-link pl-0 pr-0 font-weight-bold"
+                                        href="services.html">Services</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a
+                                        class="nav-link pl-0 pr-0 font-weight-bold"
+                                        href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- //inner page header -->
+
+        <!-- contact form -->
+        <section class="w3l-contacts-12 py-5">
+            <div class="container py-md-3">
+                <div class="contacts12-main">
+                    <div class="title-section">
+                        <h3 class="main-title-w3 mb-md-5 mb-4">Want to get in
+                            touch? <br>Find me on
+                            <a href="tel:+91-9745492562" class="text-primary">phone</a>,
+                            <a href="mailto:Niroopcv588@gmail.com"
+                                class="text-primary">email</a>,
+                            <a href="https://twitter.com/Niroopcv"
+                                class="text-primary">twitter</a>
+                            or <a
+                                href="https://www.linkedin.com/in/niroop-cv-365624283/"
+                                class="text-primary">linkedin</a>.</h3>
+                    </div>
+                  <form id="submit-form" name="submit-form" action="" method="post" class="site-form"
+						target="form-iframe">
+						<iframe name="form-iframe" style="display:none" frameborder="0"></iframe>
+
+						<h3 class="mb-5">Get In Touch</h3>
+						<div class="form-group">
+							<label for="name"></label>
+							<input type="text" id="name" name="name" class="form-control px-3 py-4"
+								placeholder="Your Name" required>
+							<small id="name-error" style="color: red; display: none;">Invalid name format</small>
+							
+
+						</div>
+						<div class="form-group">
+							<label for="email"></label>
+							<input type="email" id="email" name="email" class="form-control px-3 py-4"
+								placeholder="Your Email" required>
+							<small id="email-error" style="color: red; display: none;">Invalid email format</small>
+						</div>
+						<div class="form-group">
+							<label for="phone"></label>
+							<input type="tel" id="phone" name="phone" class="form-control px-3 py-4"
+								placeholder="Your Phone" required>
+							<small id="phone-error" style="color: red; display: none;">Invalid phone number
+								format</small>
+						</div>
+						<div class="form-group mb-5">
+							<label for="message"></label>
+							<textarea id="message" name="message" class="form-control px-3 py-4" cols="30" rows="10"
+								placeholder="Write a Message" required></textarea>
+								<small id="message-error" style="color: red; display: none;">Message is required</small>
+						</div>
+						<div class="form-group">
+							<button type="button" id="submit-form" class="btn btn-primary px-4 py-3"
+								onclick="validateAndSubmit()">Send
+								Message</button>
+						</div>
+					</form>
+
+					<script>
+						function validateAndSubmit() {
+							var emailInput = document.getElementById("email");
+							var nameInput = document.getElementById("name");
+							var phoneInput = document.getElementById("phone");
+							var messageInput = document.getElementById("message");// Add this line
+
+							var emailError = document.getElementById("email-error");
+							var phoneError = document.getElementById("phone-error");
+							var nameError = document.getElementById("name-error");
+							var messageError = document.getElementById("message-error");// Add this line
+
+							var isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
+							var isValidPhone = /^\d{10}$/.test(phoneInput.value);
+							var isValidName = /^[a-zA-Z\s]{3,}$/.test(nameInput.value);
+							var isValidMessage = messageInput.value.trim() !== ""; // Add this line
+
+
+							if (!isValidEmail) {
+								emailError.style.display = "block";
+							} else {
+								emailError.style.display = "none";
+							}
+
+							if (!isValidPhone) {
+								phoneError.style.display = "block";
+							} else {
+								phoneError.style.display = "none";
+							}
+
+							if (!isValidName) {
+								nameError.style.display = "block";
+							} else {
+								nameError.style.display = "none";
+							}
+							if (!isValidMessage) {
+								messageError.style.display = "block";
+							} else {
+								messageError.style.display = "none";
+							}
+
+
+							if (isValidEmail && isValidPhone && isValidName && isValidMessage) {
+								// Submit the form using AJAX
+								$.ajax({
+									url: "https://script.google.com/macros/s/AKfycbx1GkZsj1iVrLZPDEx9yOUD0t7eKM9EGr9FpifmhAK_aCgEZtE8BawSCYr3ekIjBTP9NA/exec",
+									data: $("#submit-form").serialize(),
+									method: "post",
+									success: function (response) {
+										alert("Form submitted successfully");
+										window.location.reload();
+									},
+									error: function (err) {
+										alert("Something went wrong");
+									}
+								});
+							}
+						}
+					</script>
+
+    </body>
+
+</html>
